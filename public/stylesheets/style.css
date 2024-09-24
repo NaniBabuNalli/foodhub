@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap');
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bebas Neue", sans-serif;
 }
@@ -9,14 +8,15 @@ legend {
 }
 
 .navbar {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  border: none;
+  background-color: whitesmoke;
+  border: rgba(115, 200, 237, 0.911) solid 1px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
 }
 
 .navbar-brand {
-  font-family: 'Lobster', cursive;
-  color: white;
+  font-family: "Abril Fatface", serif;
+  color: rgb(25, 173, 227);
   font-size: 30px;
   padding-bottom: 0px;
   font-weight: bolder;
@@ -24,7 +24,8 @@ legend {
 
 .navbar-light {
   font-family: 'Lobster', cursive;
-  color: #fff;
+  
+  color: rgb(25, 173, 227);
 }
 
 .navbar-light .navbar-toggler {
@@ -39,7 +40,7 @@ legend {
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: white;
+  color: rgb(25, 173, 227);
   transition: color 0.3s ease;
 }
 
@@ -49,11 +50,10 @@ legend {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+
 
 .card-primary {
   border-color: #90CAF9;
@@ -93,7 +93,7 @@ legend {
 }
 
 h4 a, h4 a:hover {
-  color: #fff;
+  color: #1472df;
 }
 
 h4 small {
@@ -132,6 +132,7 @@ body {
   color: #000;
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  height: 100vh;
 }
 
 .navbar-brand:hover {
@@ -141,4 +142,28 @@ body {
 small {
   font-family: "Exo 2", sans-serif;
   font-size: large;
+}
+.locName{
+  color: black;
+}
+
+.form-group{
+  margin-top: 10px;
+}
+.col-form-label{
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.badge-warning{
+  color: black;
+}
+.navbar-brand:hover{
+  color: rgba(58, 175, 211, 0.765);
+}
+.tagline{
+  font-family: "Dancing Script", cursive;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
 }
