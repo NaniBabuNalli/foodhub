@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dbURI = 'mongodb://localhost/Loc8r';
+//const dbURI = 'mongodb+srv://nanibabunalli:123456au@cluster0.yzl5k.mongodb.net/Loc8r';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 

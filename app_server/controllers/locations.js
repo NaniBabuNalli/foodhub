@@ -1,4 +1,5 @@
 /* GET 'home' page */
+/* GET 'home' page */
 const homelist = (req, res) => {
   res.render('locations-list', {
     title: 'Loc8r - find a place to work with wifi',
@@ -7,48 +8,91 @@ const homelist = (req, res) => {
       strapline: 'Find places to work with wifi near you!'
     },
     sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
-    location : {
-      name: 'Starcups',
-      address: '125 High Street, Reading, RG6 1PS',
-      rating: 3,
-      facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-      coords: { lat: 51.455041, lng: -0.9690884 },
-      openingTimes: [
-        {
-          days: 'Monday - Friday',
-          opening: '7:00am',
-          closing: '7:00pm',
-          closed: false
-        },
-        {
-          days: 'Saturday',
-          opening: '8:00am',
-          closing: '5:00pm',
-          closed: false
-        },
-        {
-          days: 'Sunday',
-          closed: true
-        }
-      ],
-      reviews: [
-        {
-          author: 'Simon Holmes',
-          rating: 5,
-          timestamp: '16 July 2013',
-          reviewText: 'What a great place. I can\'t say enough good things about it.'
-        },
-        {
-          author: 'Charlie Chaplin',
-          rating: 3,
-          timestamp: '16 June 2013',
-          reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
-        }
-      ]
-    }
-    
+    locations: [
+      {
+        name: 'Starcups',
+        address: '125 High Street, Reading, RG6 1PS',
+        rating: 3,
+        facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+        coords: { lat: 51.455041, lng: -0.9690884 },
+        openingTimes: [
+          {
+            days: 'Monday - Friday',
+            opening: '7:00am',
+            closing: '7:00pm',
+            closed: false
+          },
+          {
+            days: 'Saturday',
+            opening: '8:00am',
+            closing: '5:00pm',
+            closed: false
+          },
+          {
+            days: 'Sunday',
+            closed: true
+          }
+        ],
+        reviews: [
+          {
+            author: 'Simon Holmes',
+            rating: 5,
+            timestamp: '16 July 2013',
+            reviewText: 'What a great place. I can\'t say enough good things about it.'
+          },
+          {
+            author: 'Charlie Chaplin',
+            rating: 3,
+            timestamp: '16 June 2013',
+            reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
+          }
+        ]
+      },
+      // Added a second location for variety
+      {
+        name: 'Cafe Network',
+        address: '50 Queen Street, Reading, RG1 1QW',
+        rating: 4,
+        facilities: ['Coffee', 'Pastries', 'Free wifi'],
+        coords: { lat: 51.456042, lng: -0.970088 },
+        openingTimes: [
+          {
+            days: 'Monday - Friday',
+            opening: '6:00am',
+            closing: '6:00pm',
+            closed: false
+          },
+          {
+            days: 'Saturday',
+            opening: '7:00am',
+            closing: '5:00pm',
+            closed: false
+          },
+          {
+            days: 'Sunday',
+            closed: true
+          }
+        ],
+        reviews: [
+          {
+            author: 'Alice Smith',
+            rating: 4,
+            timestamp: '20 July 2013',
+            reviewText: 'Great atmosphere and good coffee!'
+          },
+          {
+            author: 'Bob Johnson',
+            rating: 2,
+            timestamp: '25 June 2013',
+            reviewText: 'Service was slow, but the wifi worked well.'
+          }
+        ]
+      }
+    ]
   });
 };
+
+module.exports = { homelist };
 
   /* GET 'Location info' page */
   const locationInfo = function(req, res) {
