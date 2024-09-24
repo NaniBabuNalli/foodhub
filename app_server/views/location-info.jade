@@ -5,10 +5,11 @@ block content
   .row.banner
     .col-12
       h1= pageHeader.title
+
   .row
     .col-12.col-lg-9
       .row
-        .col-12.col-md-6
+        .col-12.col-lg-6
           p.rating
             +outputRating(location.rating)
           p 4-106/C, Annojiguda, Hyderabad, Telangana 501301 
@@ -29,11 +30,14 @@ block content
                 span.badge.badge-warning
                   i.fa.fa-check
                   |  #{facility}
-  .col-12.col-md-6.location-map
-    .card.card-primary
-      .card-block
-        h2.card-title Location map
-        img.img-fluid.rounded(src=`http://maps.googleapis.com/maps/api/staticmap?center=${location.coords.lat},${location.coords.lng}&zoom=17&size=400x350&sensor=false&markers=${location.coords.lat},${location.coords.lng}&key={googleAPIKey}&scale=2`)
+
+        .col-12.col-lg-6.location-map
+          .card.card-primary
+            .card-block
+              h2.card-title Location map
+              a(href='https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana', target='_blank') 
+                img.img-fluid.rounded(src='https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png')
+
   .row
     .col-12
       .card.card-primary.review-card
