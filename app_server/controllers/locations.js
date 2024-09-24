@@ -182,15 +182,15 @@ const locationInfo = (req, res) => {
 
 
 // Add Review Page
-const addReview = (req, res) => {
-  res.render('location-review-form.jade', {
-    title: 'Review on PharmaLoc8r',
-    pageHeader: { title: 'Add Your Review' }
-  });
-};
+// const addReview = (req, res) => {
+//   res.render('location-review-form.jade', {
+//     title: 'Review on PharmaLoc8r',
+//     pageHeader: { title: 'Add Your Review' }
+//   });
+// };
 
 module.exports = {
   homelist,
   locationInfo,
-  addReview
+  //addReview
 };
