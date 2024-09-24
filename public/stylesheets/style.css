@@ -167,3 +167,25 @@ small {
   font-size: 20px;
   font-weight: 600;
 }
+.revcontainer{
+  width: 900px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: rgb(250, 225, 225);
+}
+.revcontainer:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+.revhead{
+  color: #64B5F6;
+  text-align: center;
+  text-decoration: none;
+}
+.revmsg{
+  padding-top: 5px;
+}
