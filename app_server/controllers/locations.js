@@ -11,8 +11,8 @@ const locations = [
       { days: 'Sunday', closed: true }
     ],
     reviews: [
-      { author: 'Simon Holmes', rating: 5, timestamp: '2013-07-16', reviewText: 'What a great place. I can\'t say enough good things about it.' },
-      { author: 'Charlie Chaplin', rating: 3, timestamp: '2013-06-16', reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.' }
+      { author: 'Nani Nalli', rating: 5, timestamp: '2013-07-16', reviewText: 'I recently visited Apollo Pharmacy and had a largely positive experience. The store was clean, well-organized, and stocked with a wide range of products, from prescription medications to health supplements. The staff was knowledgeable and helpful, providing detailed information about the medications I needed. Pricing was competitive, with various discounts and a beneficial membership program. While the prescription filling process was smooth and efficient, some items were out of stock, which was a minor inconvenience. Additionally, the online services, including home delivery and prescription uploads, were user-friendly, although tracking could be improved. Overall, Apollo Pharmacy offers reliable service and a pleasant shopping experience, making it a recommended choice for health-related needs.' },
+      { author: 'Bala Subhramanyam', rating: 3, timestamp: '2013-06-16', reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.' }
     ]
   },
   {
@@ -152,72 +152,38 @@ const homelist = (req, res) => {
     title: 'PharmaLoc8r - Find Your Nearest Pharmacy, Anytime, Anywhere',
     pageHeader: {
       title: 'PharmaLoc8r',
-      strapline: 'Find Your Nearest Pharmacy, Anytime, Anywhere'
-
-
+      strapline: 'Find Your Nearest Pharmacy, Anytime, Anywhere',
     },
     sidebar: "Searching for a pharmacy with great facilities? Our Pharmacy Locator helps you find the best spots for all your pharmaceutical needs...",
-    locations: locations // Use the locations array directly
+    locations: locations, // Use the locations array directly
   });
 };
 
 // Location Info Route
-const locationInfo = function(req, res) {
+// Location Info Route
+const locationInfo = (req, res) => {
+  const locationName = req.params.name.replace(/-/g, ' ');
+  const location = locations.find(loc => loc.name.toLowerCase() === locationName.toLowerCase());
+
+  if (!location) {
+    return res.status(404).send('Location not found');
+  }
+
   res.render('location-info', {
-    title: 'Appolo Pharma',
-    pageHeader: { title: 'Appolo Pharma' },
+    title: location.name,
+    pageHeader: { title: location.name },
     sidebar: {
-      context: 'is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
-      callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
+      context: `${location.name} is on Loc8r because it has great services and accessible wifi.`,
+      callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.',
     },
-    location: {
-      name: 'Appolo Pharma',
-      address: '4-106/C, Annojiguda, Hyderabad, Telangana 501301 ',
-      rating: 2.5,
-      facilities: ['Consultation Rooms', 'Prescription Services', 'Over-the-Counter Medications'],
-      coords: { lat: 51.455041, lng: -0.9690884 },
-      openingTimes: [
-        {
-          days: 'Monday - Friday',
-          opening: '8:00am',
-          closing: '9:00pm',
-          closed: false
-        },
-        {
-          days: 'Saturday',
-          opening: '9:00am',
-          closing: '9:00pm',
-          closed: false
-        },
-        {
-          days: 'Sunday',
-          opening: '11:00am',
-          closing: '5:00pm',
-          closed: false
-        }
-      ],
-      reviews: [
-        {
-          author: '     Chandra Mouli    ',
-          rating: 1,
-          timestamp: '16 August 2013',
-          reviewText: 'Worst service after taking there…Worst service after taking there membership and paying there doctor on call still from 2 days for a childs medication they are with excuses and no one calls horrible'
-        },
-        {
-          author: '    Shreyansh Bachu           ' ,
-          rating: 2,
-          timestamp: '16 June 2013',
-          reviewText: 'One of the most ROTTEN medical stores…One of the most ROTTEN medical stores in town.... Very dirty and ILL MANNERED so called staff.... I wouldnt visit those morons even if am dying 😡'
-        }
-      ]
-    }
+    location: location
   });
 };
 
 
 // Add Review Page
 const addReview = (req, res) => {
-  res.render('location-review-form', {
+  res.render('location-review-form.jade', {
     title: 'Review on Loc8r',
     pageHeader: { title: 'Add Your Review' }
   });
