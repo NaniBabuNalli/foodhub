@@ -3,7 +3,7 @@ const locations = [
     name: 'Apollo Pharma',
     address: '125 High Street, Reading, RG6 1PS',
     rating: 3,
-    facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+    facilities: ['Consultation Rooms', 'Prescription Services', 'Over-the-Counter Medications'],
     coords: { lat: 51.455041, lng: -0.9690884 },
     openingTimes: [
       { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
@@ -19,7 +19,7 @@ const locations = [
     name: 'NetMeds',
     address: '50 Queen Street, Reading, RG1 1QW',
     rating: 4,
-    facilities: ['Coffee', 'Pastries', 'Free wifi'],
+    facilities: ['Vaccinations', 'health Screening', 'Medication Reviews'],
     coords: { lat: 51.456042, lng: -0.970088 },
     openingTimes: [
       { days: 'Monday - Friday', opening: '6:00am', closing: '6:00pm', closed: false },
@@ -35,7 +35,7 @@ const locations = [
     name: 'HealthPlus Pharmacy',
     address: '200 King Street, Reading, RG1 2AA',
     rating: 5,
-    facilities: ['Hot drinks', 'Snacks', 'Free wifi'],
+    facilities: ['Home delivery', 'Mobility Services', 'Compunding Services'],
     coords: { lat: 51.457042, lng: -0.971088 },
     openingTimes: [
       { days: 'Monday - Friday', opening: '8:00am', closing: '8:00pm', closed: false },
@@ -51,7 +51,7 @@ const locations = [
     name: 'Wellness Pharmacy',
     address: '300 Queen Street, Reading, RG1 3BB',
     rating: 4,
-    facilities: ['Coffee', 'Pastries', 'Free wifi'],
+    facilities: ['Tele Health Services', 'Pastries', 'Free wifi'],
     coords: { lat: 51.458042, lng: -0.972088 },
     openingTimes: [
       { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
@@ -174,7 +174,7 @@ const locationInfo = function(req, res) {
       name: 'Appolo Pharma',
       address: '4-106/C, Annojiguda, Hyderabad, Telangana 501301 ',
       rating: 2.5,
-      facilities: ['Consultation Rooms', 'Snacks and Pastries', 'Home Delivery'],
+      facilities: ['Consultation Rooms', 'Prescription Services', 'Over-the-Counter Medications'],
       coords: { lat: 51.455041, lng: -0.9690884 },
       openingTimes: [
         {
