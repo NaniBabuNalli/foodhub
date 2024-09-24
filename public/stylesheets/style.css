@@ -1,87 +1,144 @@
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap');
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive;
+  font-family: "Bebas Neue", sans-serif;
 }
+
 legend {
   font-family: 'Lobster', cursive;
 }
+
 .navbar {
-  background-color: #ad1d28;
-  border-color: #911821;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.navbar-light .navbar-brand {
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 30px;
+  padding-bottom: 0px;
+  font-weight: bolder;
+}
+
+.navbar-light {
   font-family: 'Lobster', cursive;
   color: #fff;
 }
+
 .navbar-light .navbar-toggler {
   color: white;
   border-color: white;
 }
+
 .navbar-light .navbar-toggler-icon {
-background-image: url("data:image/svgxml;charset=utf8,%3Csvg ➥viewBox='0 0 30 30'xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2'stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+  background-image: url("data:image/svgxml;charset=utf8,%3Csvg ➥viewBox='0 0 30 30'xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2'stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
+
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: white;
+  transition: color 0.3s ease;
 }
+
 .card {
-  background-color: #469ea8;
+  background-color: #E3F2FD; /* Light sky blue for the card background */
   padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 .card-primary {
-  border-color: #a2ced3;
+  border-color: #90CAF9;
   margin-bottom: 0.5rem;
 }
+
 .banner {
   margin-top: 4em;
-  border-bottom: 1px solid #469ea8;
+  border-bottom: 1px solid #90CAF9;
   margin-bottom: 1.5em;
   padding-bottom: 0.5em;
 }
+
 .review-header {
-  background-color: #31727a;
+  background-color: #64B5F6; /* Medium blue for the review header */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
+  border-radius: 5px;
 }
+
 .review {
   margin-right: -16px;
   margin-left: -16px;
   margin-bottom: 0.5em;
 }
+
 .badge-default, .btn-primary {
-  background-color: #ad1d28;
-  border-color: #911821;
+  background-color: #007BFF; /* Blue to match the navbar */
+  border-color: #0056b3;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
+.badge-default:hover, .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #003f7f;
+}
+
 h4 a, h4 a:hover {
   color: #fff;
 }
+
 h4 small {
   font-size: 60%;
   line-height: 200%;
   color: #aaa;
 }
+
 h1 small {
   color: #aaa;
 }
+
 .address {
   margin-bottom: 0.5rem;
 }
+
 .facilities span.badge {
   margin-right: 2px;
 }
-p{
-margin-bottom: 0.65rem;
+
+p {
+  margin-bottom: 0.65rem;
 }
-a{
-color: rgba(255, 255, 255, 0.8)
+
+a {
+  color: rgba(0, 123, 255, 0.8); /* Blue color for links */
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  color:#fff
+  color: #007BFF;
 }
+
 body {
   font-family: "Cabin", Arial, sans-serif;
-  color: #fff;
-  background-color: #108a93;
+  color: #000;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.navbar-brand:hover {
+  color: rgb(51, 0, 255);
+}
+
+small {
+  font-family: "Exo 2", sans-serif;
+  font-size: large;
 }
