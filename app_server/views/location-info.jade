@@ -12,36 +12,29 @@ block content
         .col-12.col-lg-6
           p.rating
             +outputRating(location.rating)
-          p 4-106/C, Annojiguda, Hyderabad, Telangana 501301 
+          p= location.address
           .card.card-primary
-            .card-block
+            .card-body
               h2.card-title Opening hours
               each time in location.openingTimes
                 p.card-text
-                  | #{time.days} :
+                  | #{time.days}:
                   if time.closed
-                    | closed
+                    | Closed
                   else
                     | #{time.opening} - #{time.closing}
           .card.card-primary
-            .card-block
+            .card-body
               h2.card-title Facilities
               each facility in location.facilities
                 span.badge.badge-warning
                   i.fa.fa-check
-                  |  #{facility}
-
-        .col-12.col-lg-6.location-map
-          .card.card-primary
-            .card-block
-              h2.card-title Location map
-              a(href='https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana', target='_blank') 
-                img.img-fluid.rounded(src='https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png')
+                  | #{facility}
 
   .row
     .col-12
       .card.card-primary.review-card
-        .card-block
+        .card-body
           a.btn.btn-primary.float-right(href='/location/review/new') Add review
           h2.card-title Customer reviews
           each review in location.reviews

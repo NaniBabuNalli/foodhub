@@ -1,178 +1,142 @@
 const locations = [
   {
-    name: 'Apollo Pharma',
-    address: '4-106/C, Annojiguda, Hyderabad, Telangana 501301 ',
-    rating: 3,
-    facilities:['Prescription refills', 'Over-the-counter medications', 'Blood pressure monitoring'],
-    coords: { lat: 51.455041, lng: -0.9690884 },
-    openingTimes: [
-      { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
-      { days: 'Saturday', opening: '8:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
-    ],
-    reviews: [
-      { author: 'Nani Nalli', rating: 5, timestamp: '2013-07-16', reviewText: 'I recently visited Apollo Pharmacy and had a largely positive experience. The store was clean, well-organized, and stocked with a wide range of products, from prescription medications to health supplements. The staff was knowledgeable and helpful, providing detailed information about the medications I needed. Pricing was competitive, with various discounts and a beneficial membership program. While the prescription filling process was smooth and efficient, some items were out of stock, which was a minor inconvenience. Additionally, the online services, including home delivery and prescription uploads, were user-friendly, although tracking could be improved. Overall, Apollo Pharmacy offers reliable service and a pleasant shopping experience, making it a recommended choice for health-related needs.' },
-      { author: 'Bala Subhramanyam', rating: 3, timestamp: '2013-06-16', reviewText: 'Convenient location, but the waiting time was a bit long. However, they have a good selection of health products.' }
-    ],
-    gmail : 'appolopharamacy56@gmail.com',
-    phno: '9177440337'
-  },
-  {
-    name: 'NetMeds',
-    address: '3-99/1, Chengicherla Road, Beside Mahadev Jewellers, Chengicherla, Hyderabad, Telangana 500092',
+    name: 'The Spicy Bistro',
+    address: '123 Main Street, Jubilee Hills, Hyderabad, Telangana 500033',
     rating: 4,
-    facilities: ['Online prescription ordering', 'Home delivery', 'Immunizations'],
-    coords: { lat: 51.456042, lng: -0.970088 },
+    facilities: ['Indoor seating', 'Free Wi-Fi', 'Air conditioning'],
+    coords: { lat: 17.4239, lng: 78.4000 },
     openingTimes: [
-      { days: 'Monday - Friday', opening: '6:00am', closing: '6:00pm', closed: false },
-      { days: 'Saturday', opening: '7:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
+      { days: 'Monday - Friday', opening: '11:00am', closing: '11:00pm', closed: false },
+      { days: 'Saturday', opening: '11:00am', closing: '12:00am', closed: false },
+      { days: 'Sunday', opening: '12:00pm', closing: '11:00pm', closed: false }
     ],
     reviews: [
-      { author: '    Shreyansh    ', rating: 4, timestamp: '2013-07-20', reviewText: 'Their online ordering system is easy to use, and delivery is fast. I haven’t had any issues with prescriptions, and their customer service is helpful.'},
-      { author: '    Mouli    ', rating: 2, timestamp: '2013-06-25', reviewText: 'Good pharmacy, but sometimes it feels understaffed. The lines can get long during peak hours.' }
+      { author: 'Rohit Sharma', rating: 5, timestamp: '2023-08-12', reviewText: 'Amazing food and ambiance. The staff is very courteous, and the dishes were flavorful. Highly recommended for family gatherings!' },
+      { author: 'Sneha Kapoor', rating: 4, timestamp: '2023-08-18', reviewText: 'Great place with good food, but the waiting time can be a bit long on weekends.' }
     ],
-    gmail : 'netmedspharma@gmail.com',
-    phno: '9177449988'
+    gmail: 'spicybistro@gmail.com',
+    phno: '9876543210'
   },
   {
-    name: 'HealthPlus Pharmacy',
-    address: 'Kamala Nagar Main Rd, Vikarabad, Telangana ',
+    name: 'Urban Tadka',
+    address: '456 High Street, Banjara Hills, Hyderabad, Telangana 500034',
     rating: 5,
-    facilities: ['Prescription consultation', 'Vaccination services', 'Health screenings'],
-    coords: { lat: 51.457042, lng: -0.971088 },
+    facilities: ['Rooftop seating', 'Live music', 'Valet parking'],
+    coords: { lat: 17.4178, lng: 78.4482 },
     openingTimes: [
-      { days: 'Monday - Friday', opening: '8:00am', closing: '8:00pm', closed: false },
-      { days: 'Saturday', opening: '9:00am', closing: '6:00pm', closed: false },
-      { days: 'Sunday', closed: true }
+      { days: 'Monday - Friday', opening: '12:00pm', closing: '11:30pm', closed: false },
+      { days: 'Saturday', opening: '12:00pm', closing: '12:30am', closed: false },
+      { days: 'Sunday', opening: '12:00pm', closing: '11:30pm', closed: false }
     ],
     reviews: [
-      { author: '   Srinivas    ', rating: 5, timestamp: '2013-08-10', reviewText: 'A great pharmacy with professional staff. I had some questions about a medication, and they explained everything clearly. Highly recommended.' },
-      { author: '   Karthikeya   ', rating: 4, timestamp: '2013-08-15', reviewText: 'Quick service and reasonable prices. I always trust this pharmacy for my familys medical needs' }
+      { author: 'Ajay Kumar', rating: 5, timestamp: '2023-07-22', reviewText: 'The rooftop seating is perfect for a night out. The food was delicious, and the view was amazing.' },
+      { author: 'Meera Patel', rating: 4, timestamp: '2023-07-30', reviewText: 'The live music adds to the overall experience. Food was good, but the service was a bit slow.' }
     ],
-    gmail : 'healthplus@gmail.com',
-    phno: '91878906798'
+    gmail: 'urbantadka@gmail.com',
+    phno: '9876543211'
   },
   {
-    name: 'Wellness Pharmacy',
-    address: '162, Korremula Road, OU Colony, Chowdhariguda, Hyderabad, Telangana 500088',
+    name: 'Café Mocha',
+    address: '78 Park Avenue, Hitech City, Hyderabad, Telangana 500081',
     rating: 4,
-    facilities: ['Diabetes care supplies', 'Prescription synchronization', 'Medical equipment rental'],
-    coords: { lat: 51.458042, lng: -0.972088 },
+    facilities: ['Outdoor seating', 'Pet-friendly', 'Breakfast menu'],
+    coords: { lat: 17.4504, lng: 78.3808 },
     openingTimes: [
-      { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
-      { days: 'Saturday', opening: '8:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
+      { days: 'Monday - Friday', opening: '8:00am', closing: '10:00pm', closed: false },
+      { days: 'Saturday', opening: '8:00am', closing: '11:00pm', closed: false },
+      { days: 'Sunday', opening: '9:00am', closing: '10:00pm', closed: false }
     ],
     reviews: [
-      { author: '      Pranay Reddy     ', rating: 4, timestamp: '2013-09-12', reviewText: 'Nice and clean pharmacy. The staff is very polite, and I found everything I needed for my child’s allergies. Will visit again.' },
-      { author: '   Koushik reddy      ', rating: 3, timestamp: '2013-09-18', reviewText: 'I like their wellness section. Lots of organic and natural products that are hard to find elsewhere' }
+      { author: 'Manish Reddy', rating: 4, timestamp: '2023-06-18', reviewText: 'Great place to relax and have coffee. Their breakfast menu is a must-try.' },
+      { author: 'Pooja Singh', rating: 3, timestamp: '2023-06-25', reviewText: 'Loved the ambiance, but the food portions were small for the price.' }
     ],
-    gmail : 'wellnesspharmacy@gmail.com',
-    phno: '9177499887'
+    gmail: 'cafemocha@gmail.com',
+    phno: '9876543212'
   },
   {
-    name: 'Care Pharmacy',
-    address: 'Door No 5/123/1, Shop No 2, Boduppal Rd, Peerzadiguda, Buddha Nagar, Hyderabad, Telangana 500039',
-    rating: 3,
-    facilities: ['Flu shots', 'Medication therapy management', 'Prescription transfers'],
-    coords: { lat: 51.459042, lng: -0.973088 },
-    openingTimes: [
-      { days: 'Monday - Friday', opening: '8:00am', closing: '8:00pm', closed: false },
-      { days: 'Saturday', opening: '9:00am', closing: '6:00pm', closed: false },
-      { days: 'Sunday', closed: true }
-    ],
-    reviews: [
-      { author: '      Akash     ', rating: 3, timestamp: '2013-10-20', reviewText: 'The pharmacist here is very knowledgeable, and they always make sure I understand my medications before I leave. Great customer service!.' },
-      { author: '     Tej         ', rating: 4, timestamp: '2013-10-25', reviewText: 'Good prices on over-the-counter products. Sometimes they run out of stock on popular items, though.' }
-    ],
-    gmail : 'carepharma88@gmail.com',
-    phno: '9987654328'
-  },
-  {
-    name: 'MedPlus Pharmacy',
-    address: '5-5/25/15/173, Balajinagar, Bolligudem, Boduppal(V), Medipally(M), Hyderabad, Malkajgiri, Telangana 500098',
-    rating: 4,
-    facilities: ['In-home medication delivery', 'Prescription reminders', 'Chronic disease management'],
-    coords: { lat: 51.460042, lng: -0.974088 },
-    openingTimes: [
-      { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
-      { days: 'Saturday', opening: '8:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
-    ],
-    reviews: [
-      { author: '       Hemanth      ', rating: 4, timestamp: '2013-11-12', reviewText: 'I had a prescription that was hard to fill, but the pharmacist here went the extra mile to find an alternative for me. Super helpful!' },
-      { author: '       Abhi         ', rating: 3, timestamp: '2013-11-15', reviewText: 'Conveniently located, but the interior is a bit cramped. They have a good variety of health products, though' }
-    ],
-    gmail : 'Medpluspharamacy@gmail.com',
-    phno: '98906754356'
-  },
-  {
-    name: 'LifePharma',
-    address: 'D.No.1 and 2, Nadergul X Roads, Village, Nadargul, Telangana',
+    name: 'Royal Dine',
+    address: '15 Castle Road, Kondapur, Hyderabad, Telangana 500084',
     rating: 5,
-    facilities: ['Travel vaccinations', 'Health consultations', 'Compounding services'],
-    coords: { lat: 51.461042, lng: -0.975088 },
+    facilities: ['Banquet hall', 'Buffet', 'Private dining'],
+    coords: { lat: 17.4749, lng: 78.3892 },
     openingTimes: [
-      { days: 'Monday - Friday', opening: '6:30am', closing: '7:00pm', closed: false },
-      { days: 'Saturday', opening: '7:30am', closing: '6:00pm', closed: false },
-      { days: 'Sunday', closed: true }
+      { days: 'Monday - Friday', opening: '11:30am', closing: '10:30pm', closed: false },
+      { days: 'Saturday', opening: '11:30am', closing: '11:00pm', closed: false },
+      { days: 'Sunday', opening: '12:00pm', closing: '10:30pm', closed: false }
     ],
     reviews: [
-      { author: '     Harsha      ', rating: 5, timestamp: '2013-12-02', reviewText: 'Great experience! The pharmacy is modern and well-stocked, and they have a dedicated area for consultations, which I found really helpful.' },
-      { author: '       Shannu      ', rating: 4, timestamp: '2013-12-10', reviewText: ' trust this pharmacy for all my health needs. The staff is very professional, and they offer a wide range of services.' }
+      { author: 'Sakshi Gupta', rating: 5, timestamp: '2023-09-05', reviewText: 'Excellent buffet with a variety of options. The desserts were particularly impressive.' },
+      { author: 'Nikhil Verma', rating: 4, timestamp: '2023-09-12', reviewText: 'A bit crowded on weekends, but the service was good, and the food was worth it.' }
     ],
-    gmail : 'lifepharmapharamacy6@gmail.com',
-    phno: '9189765437'
+    gmail: 'royaldine@gmail.com',
+    phno: '9876543213'
   },
   {
-    name: 'WellCare Pharmacy',
-    address: 'Plot no:977, Survey no:45-50, H No:6-48/3 Besidem Ramraj Cotton Show Room, Peerzadiguda Municipality,',
-    rating: 4,
-    facilities: ['Prescription delivery', 'Pediatric medications', 'First aid supplies'],
-    coords: { lat: 51.462042, lng: -0.976088 },
-    openingTimes: [
-      { days: 'Monday - Friday', opening: '7:00am', closing: '7:00pm', closed: false },
-      { days: 'Saturday', opening: '8:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
-    ],
-    reviews: [
-      { author: '      Deepak       ', rating: 4, timestamp: '2014-01-08', reviewText: 'The pharmacy offers great customer care, and they even deliver my medication. The staff is always friendly and polite.' },
-      { author: '       Shiva        ', rating: 3, timestamp: '2014-01-12', reviewText: 'Nice place to get basic health essentials. It’s a small pharmacy, but they offer quick service.' }
-    ],
-    gmail : 'wellcarepharamacy6@gmail.com',
-    phno: '9909876537'
-  },
-  {
-    name: 'CuraPharm',
-    address: 'Plot.No.3/1, Shop No.2, 3, 4 Ground Floor, MMJ Complex, Hyderabad Road',
+    name: 'Spice Route',
+    address: '302 Circular Road, Madhapur, Hyderabad, Telangana 500081',
     rating: 3,
-    facilities: ['Specialty medications', 'Medical supplies', 'Medication adherence programs'],
-    coords: { lat: 51.463042, lng: -0.977088 },
+    facilities: ['Takeout service', 'Family-friendly', 'Vegan options'],
+    coords: { lat: 17.4493, lng: 78.3931 },
     openingTimes: [
-      { days: 'Monday - Friday', opening: '8:00am', closing: '6:00pm', closed: false },
-      { days: 'Saturday', opening: '9:00am', closing: '5:00pm', closed: false },
-      { days: 'Sunday', closed: true }
+      { days: 'Monday - Friday', opening: '11:00am', closing: '10:00pm', closed: false },
+      { days: 'Saturday', opening: '11:00am', closing: '10:30pm', closed: false },
+      { days: 'Sunday', opening: '12:00pm', closing: '10:00pm', closed: false }
     ],
     reviews: [
-      { author: '          Akhil       ', rating: 3, timestamp: '2014-02-10', reviewText: 'I’ve been coming here for years. The pharmacists know me by name and always provide excellent advice on my prescriptions.' },
-      { author: '       Rishi          ', rating: 4, timestamp: '2014-02-15', reviewText: 'A hidden gem! They carry a wide range of supplements and natural remedies, and the staff is very knowledgeable.' }
+      { author: 'Anjali Mehta', rating: 4, timestamp: '2023-08-08', reviewText: 'Tasty food with a good range of vegan options. Takeout service was quick and hassle-free.' },
+      { author: 'Ravi Teja', rating: 3, timestamp: '2023-08-15', reviewText: 'Decent food, but the portions could be bigger. Good place for a family dinner.' }
     ],
-    gmail : 'curepharma56@gmail.com',
-    phno: '9178990087'
+    gmail: 'spiceroute@gmail.com',
+    phno: '9876543214'
+  },
+  {
+    name: 'Bistro Delight',
+    address: '12 Garden Road, Begumpet, Hyderabad, Telangana 500016',
+    rating: 4,
+    facilities: ['Cozy ambiance', 'Continental cuisine', 'Late-night menu'],
+    coords: { lat: 17.4415, lng: 78.4657 },
+    openingTimes: [
+      { days: 'Monday - Friday', opening: '12:00pm', closing: '11:00pm', closed: false },
+      { days: 'Saturday', opening: '12:00pm', closing: '12:00am', closed: false },
+      { days: 'Sunday', opening: '1:00pm', closing: '11:00pm', closed: false }
+    ],
+    reviews: [
+      { author: 'Siddharth Rao', rating: 4, timestamp: '2023-07-10', reviewText: 'A cozy place to hang out with friends. Their continental dishes are top-notch.' },
+      { author: 'Aditi Bhatia', rating: 3, timestamp: '2023-07-17', reviewText: 'The ambiance is good, but the prices are a bit on the higher side. Worth it for a special occasion.' }
+    ],
+    gmail: 'bistrodelight@gmail.com',
+    phno: '9876543215'
+  },
+  {
+    name: 'Saffron Spice',
+    address: '29 Mall Road, Ameerpet, Hyderabad, Telangana 500038',
+    rating: 5,
+    facilities: ['Fine dining', 'Private dining', 'Parking available'],
+    coords: { lat: 17.4385, lng: 78.4404 },
+    openingTimes: [
+      { days: 'Monday - Friday', opening: '1:00pm', closing: '10:30pm', closed: false },
+      { days: 'Saturday', opening: '1:00pm', closing: '11:00pm', closed: false },
+      { days: 'Sunday', opening: '1:30pm', closing: '10:30pm', closed: false }
+    ],
+    reviews: [
+      { author: 'Shivani Desai', rating: 5, timestamp: '2023-09-25', reviewText: 'The best fine dining experience I’ve had in Hyderabad. The service was impeccable, and the food was exquisite.' },
+      { author: 'Rahul Nair', rating: 4, timestamp: '2023-09-30', reviewText: 'Great place for a date night. The private dining area provides a nice touch.' }
+    ],
+    gmail: 'saffronspice@gmail.com',
+    phno: '9876543216'
   }
-]
+];
 
 
 // Home List Route
 const homelist = (req, res) => {
   res.render('locations-list', {
-    title: 'PharmaLoc8r - Find Your Nearest Pharmacy, Anytime, Anywhere',
+    title: 'FoodHub - Connecting You to Nutritious Choices!!!',
     pageHeader: {
-      title: 'PharmaLoc8r',
-      strapline: 'Find Your Nearest Pharmacy, Anytime, Anywhere',
+      title: 'FoodHub',
+      strapline: 'Connecting You to Nutritious Choices!!!',
     },
-    sidebar: "Searching for a pharmacy with great facilities? Our Pharmacy Locator helps you find the best spots for all your pharmaceutical needs...",
+    sidebar: "Looking for a restaurant that serves your favorite cuisine? FoodHub helps you discover the best dining spots around, whether you crave delicious street food or a gourmet dining experience...",
     locations: locations, // Use the locations array directly
   });
 };
