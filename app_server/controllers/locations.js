@@ -155,8 +155,7 @@ const locationInfo = (req, res) => {
     title: location.name,
     pageHeader: { title: location.name },
     sidebar: {
-      context: `${location.name} is featured on Pharmacy Locator because it offers excellent healthcare services and customer care.`,
-      callToAction: `To Contact Us:\nGmail: ${location.gmail}\nPhone: ${location.phno}`
+      context: `To Contact Us:\nGmail: ${location.gmail}\nPhone: ${location.phno}`
     },
     location: location
   });
