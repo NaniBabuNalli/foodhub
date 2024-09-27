@@ -1,6 +1,6 @@
 const locations = [
   {
-    name: 'The Spicy Bistro',
+    name: 'The Spicy',
     address: '123 Main Street, Jubilee Hills, Hyderabad, Telangana 500033',
     rating: 4,
     facilities: ['Indoor seating', 'Free Wi-Fi', 'Air conditioning'],
