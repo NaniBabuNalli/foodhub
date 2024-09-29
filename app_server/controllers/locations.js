@@ -90,7 +90,7 @@ const locations = [
     phno: '9876543214'
   },
   {
-    name: 'Bistro Delight',
+    name: 'Bistro_Delight',
     address: '12 Garden Road, Begumpet, Hyderabad, Telangana 500016',
     rating: 4,
     facilities: ['Cozy ambiance', 'Continental cuisine', 'Late-night menu'],
@@ -166,7 +166,7 @@ const locationInfo = (req, res) => {
 //Add Review Page
 const addReview = (req, res) => {
   res.render('location-review-form', {
-    title: 'Review on PharmaLoc8r',
+    title: 'Review on foodhub',
     pageHeader: { title: 'Add Your Review' }
   });
 };
