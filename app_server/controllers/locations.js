@@ -1,3 +1,7 @@
+const mongoose = require('mongoose');
+const Review = require('../models/review');
+
+// Mock data for locations
 const locations = [
   {
     name: 'The Spicy',
@@ -14,6 +18,8 @@ const locations = [
       { author: 'Rohit Sharma', rating: 5, timestamp: '2023-08-12', reviewText: 'Amazing food and ambiance. The staff is very courteous, and the dishes were flavorful. Highly recommended for family gatherings!' },
       { author: 'Sneha Kapoor', rating: 4, timestamp: '2023-08-18', reviewText: 'Great place with good food, but the waiting time can be a bit long on weekends.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://b.zmtcdn.com/data/pictures/3/20757873/85c059c97463f1fc969fc71dc1e059db.jpg',
     gmail: 'spicybistro@gmail.com',
     phno: '9876543210'
   },
@@ -32,6 +38,8 @@ const locations = [
       { author: 'Ajay Kumar', rating: 5, timestamp: '2023-07-22', reviewText: 'The rooftop seating is perfect for a night out. The food was delicious, and the view was amazing.' },
       { author: 'Meera Patel', rating: 4, timestamp: '2023-07-30', reviewText: 'The live music adds to the overall experience. Food was good, but the service was a bit slow.' }
     ],
+    mapUrl : 'https://www.bing.com/maps?osid=561850da-e9b4-4bf2-be63-c2795449e04c&cp=17.527716~78.484547&lvl=17&pi=0&imgid=df28cadd-207b-45e2-891a-c0ee53c553df&v=2&sV=2&form=S00027',
+    imageSrc : 'https://images.deliveryhero.io/image/talabat/restaurants/UTRLOGO638024848157659062.jpg?width=180',
     gmail: 'urbantadka@gmail.com',
     phno: '9876543211'
   },
@@ -50,6 +58,8 @@ const locations = [
       { author: 'Manish Reddy', rating: 4, timestamp: '2023-06-18', reviewText: 'Great place to relax and have coffee. Their breakfast menu is a must-try.' },
       { author: 'Pooja Singh', rating: 3, timestamp: '2023-06-25', reviewText: 'Loved the ambiance, but the food portions were small for the price.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png',
     gmail: 'cafemocha@gmail.com',
     phno: '9876543212'
   },
@@ -68,6 +78,8 @@ const locations = [
       { author: 'Sakshi Gupta', rating: 5, timestamp: '2023-09-05', reviewText: 'Excellent buffet with a variety of options. The desserts were particularly impressive.' },
       { author: 'Nikhil Verma', rating: 4, timestamp: '2023-09-12', reviewText: 'A bit crowded on weekends, but the service was good, and the food was worth it.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png',
     gmail: 'royaldine@gmail.com',
     phno: '9876543213'
   },
@@ -86,11 +98,13 @@ const locations = [
       { author: 'Anjali Mehta', rating: 4, timestamp: '2023-08-08', reviewText: 'Tasty food with a good range of vegan options. Takeout service was quick and hassle-free.' },
       { author: 'Ravi Teja', rating: 3, timestamp: '2023-08-15', reviewText: 'Decent food, but the portions could be bigger. Good place for a family dinner.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png',
     gmail: 'spiceroute@gmail.com',
     phno: '9876543214'
   },
   {
-    name: 'Bistro_Delight',
+    name: 'Bistro Delight',
     address: '12 Garden Road, Begumpet, Hyderabad, Telangana 500016',
     rating: 4,
     facilities: ['Cozy ambiance', 'Continental cuisine', 'Late-night menu'],
@@ -104,6 +118,8 @@ const locations = [
       { author: 'Siddharth Rao', rating: 4, timestamp: '2023-07-10', reviewText: 'A cozy place to hang out with friends. Their continental dishes are top-notch.' },
       { author: 'Aditi Bhatia', rating: 3, timestamp: '2023-07-17', reviewText: 'The ambiance is good, but the prices are a bit on the higher side. Worth it for a special occasion.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png',
     gmail: 'bistrodelight@gmail.com',
     phno: '9876543215'
   },
@@ -120,13 +136,15 @@ const locations = [
     ],
     reviews: [
       { author: 'Shivani Desai', rating: 5, timestamp: '2023-09-25', reviewText: 'The best fine dining experience I’ve had in Hyderabad. The service was impeccable, and the food was exquisite.' },
-      { author: 'Rahul Nair', rating: 4, timestamp: '2023-09-30', reviewText: 'Great place for a date night. The private dining area provides a nice touch.' }
+      { author: 'Rahul Nair', rating: 4, timestamp: '2023-09-30', reviewText: 'Great place for a date night. The ambiance is romantic, and the food was delicious.' }
     ],
+    mapUrl : 'https://www.google.com/maps?q=4-106/C,Annojiguda,Hyderabad,Telangana',
+    imageSrc : 'https://res.cloudinary.com/dddbzt904/image/upload/v1727159779/Screenshot_2024-09-24_at_12.05.39_PM_mkopjo.png',
     gmail: 'saffronspice@gmail.com',
     phno: '9876543216'
   }
+  // Other locations can be added here
 ];
-
 
 // Home List Route
 const homelist = (req, res) => {
@@ -141,7 +159,6 @@ const homelist = (req, res) => {
   });
 };
 
-// Location Info Route
 // Location Info Route
 const locationInfo = (req, res) => {
   const locationName = req.params.name.replace(/-/g, ' ');
@@ -161,18 +178,42 @@ const locationInfo = (req, res) => {
   });
 };
 
-
-
-//Add Review Page
+// Add Review Page
 const addReview = (req, res) => {
   res.render('location-review-form', {
-    title: 'Review on foodhub',
+    title: 'Review on FoodHub',
     pageHeader: { title: 'Add Your Review' }
   });
 };
 
+// Submit Review Route
+const submitReview = async (req, res) => {
+  const { name, rating, review } = req.body;
+
+  // Create a new review instance
+  const newReview = new Review({
+    name: name,
+    rating: parseInt(rating, 10), // Ensure the rating is saved as a number
+    review: review
+  });
+
+  try {
+    // Save the review to the database
+    await newReview.save();
+    console.log('Review saved:', newReview);
+
+    // Redirect to the home page after submission
+    res.redirect('/');
+  } catch (error) {
+    console.error('Error saving review:', error);
+    res.status(500).send('Error saving review');
+  }
+};
+
+// Exporting all the controller functions
 module.exports = {
   homelist,
   locationInfo,
-  addReview
+  addReview,
+  submitReview
 };

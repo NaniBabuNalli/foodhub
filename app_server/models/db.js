@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost/FoodHub';
-//const dbURI = 'mongodb+srv://nanibabunalli:123456au@cluster0.yzl5k.mongodb.net/Loc8r';
+const dbURI = 'mongodb://localhost:27017/FoodHub';
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+// Remove deprecated options
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${dbURI}`);
@@ -24,14 +24,15 @@ const gracefulShutdown = (msg, callback) => {
 };
 require('./locations');
 
-// // For nodemon restarts
+// Uncomment if you need graceful shutdown for nodemon restarts or app termination
+// For nodemon restarts
 // process.once('SIGUSR2', () => {
 //   gracefulShutdown('nodemon restart', () => {
 //     process.kill(process.pid, 'SIGUSR2');
 //   });
 // });
 
-// // For app termination
+// For app termination
 // process.on('SIGINT', () => {
 //   gracefulShutdown('app termination', () => {
 //     process.exit(0);

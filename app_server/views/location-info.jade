@@ -29,7 +29,14 @@ block content
               each facility in location.facilities
                 span.badge.badge-warning
                   i.fa.fa-check
-                  | #{facility}
+                  |  #{facility}
+
+        .col-12.col-lg-6.location-map
+          .card.card-primary
+            .card-body
+              h2.card-title Image Here
+              a(href= location.mapUrl, target='_blank') 
+                img.img-fluid.rounded(src= location.imageSrc)
 
   .row
     .col-12
@@ -48,4 +55,4 @@ block content
                 p !{(review.reviewText).replace(/\n/g, '<br/>')}
     .col-12.col-lg-3
       p.lead #{location.name} #{sidebar.context}
-      //p= sidebar.callToAction
+      p= sidebar.callToAction
